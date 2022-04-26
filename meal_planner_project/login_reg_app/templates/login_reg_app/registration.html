@@ -13,13 +13,13 @@
 </head>
 <body>
     <img id="login_background" src="{% static 'img/login_background.jpg' %}">
-    <img id="logo" class = "top-left" src="{% static 'img/meal_dojo_logo.png' %}">
     <div class="container d-flex justify-content-center position-absolute top-50 start-50 translate-middle">
         <form class="bg-transparent p-3 col-xs-12 col-sm-10 col-md-8 col-lg-6 mb-5" action="/registration" method="post">
             {% csrf_token %}
             <div class="form-group text-left p-2">
-                <div class="d-flex">
-                    <h1 class="mt-4"><i class="fa-solid fa-user fa-bounce"></i> Create Account</h1>
+                <div class="d-flex justify-content-between mb-2">
+                    <h2 class="mt-4"><i class="fa-solid fa-user fa-bounce"></i> Create Account</h2>
+                    <img id="logo" src="{% static 'img/meal_dojo_logo.png' %}">
                 </div>
                 {% if messages %}
                     <ul class="messages alert-danger">
