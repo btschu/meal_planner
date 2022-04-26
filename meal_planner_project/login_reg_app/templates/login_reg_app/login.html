@@ -13,13 +13,13 @@
 </head>
 <body>
     <img id="login_background" src="{% static 'img/login_background.jpg' %}" />
-    <div class="container d-flex justify-content-center text-center position-absolute top-50 start-50 translate-middle">
+    <div class="container d-flex justify-content-center position-absolute top-50 start-50 translate-middle">
         <form class="content bg-transparent col-xs-12 col-sm-10 col-md-8 col-lg-6 mb-5" action="/login" method="post">
             {% csrf_token %}
             <div class="form-group p-2">
                 <div class="d-flex">
                     <!-- <img src="{% static 'images/image.jpg' %}" /> -->
-                    <h1 class=""><i class="fa-solid fa-user"></i> Sign In</h1>
+                    <h1 class=""><i class="fa-solid fa-user fa-bounce"></i> Sign In</h1>
                 </div>
                 {% if messages %}
                     <ul class="messages alert-danger">
