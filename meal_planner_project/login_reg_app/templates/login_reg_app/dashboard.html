@@ -14,7 +14,7 @@
 <body>
     <img id="login_background" src="{% static 'img/login_background.jpg' %}" />
     <div class="container d-flex justify-content-center text-center position-absolute top-50 start-50 translate-middle">
-        <h1>Welcome!!!</h1>
+        <h1>Welcome, {{user.first_name}}!!! <a class="btn btn-danger" href="/logout">Logout</a></h1>
     </div>
     <div>
         <a href="https://www.freepik.com/photos/nutrition">Nutrition photo created by freepik - www.freepik.com</a>
