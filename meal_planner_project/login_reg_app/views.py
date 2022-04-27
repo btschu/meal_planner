@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import User
+import recipe_app
 import bcrypt
 
 def login(request):
@@ -16,23 +17,7 @@ def login(request):
             return redirect('/')
         else:
             request.session['user_id'] = this_user.first().id
-            return redirect('/dashboard')
-
-
-        # login_errors = User.objects.login_validator(request.POST)
-        # user = User.objects.filter(email=request.POST['email'])
-        # if len(login_errors) or len(user) <= 0:
-        #     for key, value in login_errors.items():
-        #         messages.info(request, value)
-        #     return redirect('/')
-        # if user:
-        #     logged_user = user[0]
-        #     if bcrypt.checkpw(request.POST['password'].encode(), logged_user.password.encode()):
-        #         request.session['user_id'] = logged_user.id
-        #         return redirect('/dashboard')
-        #     else:
-        #         messages.error(request, "Invalid email address or password!")
-        # return redirect('/dashboard')
+            return redirect('/recipes/dashboard')
 
 def registration(request):
     if request.method == 'GET':
@@ -53,16 +38,7 @@ def registration(request):
                 password=pw_hash
             )
             request.session['user_id'] = user.id
-            return redirect('/dashboard')
-
-def dashboard(request):
-    if not 'user_id' in request.session:
-        return redirect('/')
-    else:
-        context = {
-            'user': User.objects.get(id=request.session['user_id'])
-        }
-        return render(request, 'login_reg_app/dashboard.html', context)
+            return redirect('/recipes')
 
 def logout(request):
     request.session.clear()
