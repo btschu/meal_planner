@@ -1,13 +1,19 @@
+/* background image */
+
 #main_background, body {
   height: 100vh;
   width: 100vw;
   position: absolute;
 }
 
+/* logout dropdown */
+
 .dropdown:hover .dropdown-menu {
     display: block !important;
     right: 0 !important;
 }
+
+/* card styling */
 
 .card{
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45) !important;
@@ -15,6 +21,8 @@
     border-radius: 16px !important;
     border: 1px solid rgba(255, 255, 255, 0.589) !important;
 }
+
+/* sizing */
 
 @media screen and (min-width: 951px) {
     form {
@@ -34,4 +42,277 @@
     object-fit:scale-down;
 }
 
+.scroll {
+  max-height: 550px;
+  overflow-y: auto;
+}
 
+.shopping-list {
+  height: 550px;
+}
+
+.fav-recipe {
+  height: 260px;
+  margin-bottom: 30px;
+}
+
+.own-recipe {
+  height: 260px;
+}
+
+/* card option 1 */
+
+/* @import url('https://fonts.googleapis.com/css?family=Passion+One:400,900|Roboto:400,900');
+
+$space: .5rem; */
+
+/* * {
+  box-sizing: border-box;
+  margin: 0 !important;
+} */
+
+/* body {
+  font-family: 'Roboto', sans-serif;
+  font-size: $space*1.5;
+  color: rgba(31,31,31,.9);
+  background: url(https://druryjeff.github.io/better-from-the-source/img/wood.jpg) 50% 50%;
+} */
+
+/* .card {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .side {
+  width: 40%;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 $space*5 #212121;
+} */
+
+/* Front of Card */
+
+/* .front {
+  display: flex;
+  flex-direction: column;
+  background-color: #757575;
+} */
+
+/* header {
+  flex: 1 1 33%;
+  display: flex;
+  justify-content: space-between;
+  padding: $space*2;
+  text-transform: uppercase;
+  background-color: white;
+  * {
+      font-weight: normal;    
+  }
+  h1 {
+    padding: $space 0;
+    border-top: $space/4 solid rgba(31,31,31,.9);
+    border-bottom: $space/4 solid rgba(31,31,31,.9);
+    font-size: $space*3;
+    flex-basis: 48%;
+    font-family: 'Passion One', cursive;
+    span {
+      display: block;
+      font-size: $space*1.5;
+      font-weight: normal;
+      text-transform: capitalize;
+      letter-spacing: .5px;
+    }
+  } */
+  /* nav {
+    padding: $space 0;
+    border-top: $space/4 solid rgba(31,31,31,.9);
+    border-bottom: $space/4 solid rgba(31,31,31,.9);
+    flex-basis: 48%;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+    p {
+      flex-basis: 60%;
+      font-size: $space*1.25;
+    }
+    h4 {
+      flex-basis: 30%;
+      letter-spacing: .5px;
+      font-weight: 900;
+      font-size: $space*1.25;
+    }
+  }
+} */
+
+/* .hero {
+  position: relative;
+  flex: 1 1 67%;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  display: flex;
+  img {
+    display: block;
+  }
+  &:before {
+    position: absolute;
+    bottom: $space*3;
+    right: $space*3;
+    z-index: 1;
+    content: 'Real Good';
+    font-family: sans-serif;
+    font-size: $space*3;
+    background-color: #212121;
+    width: $space*4;
+    height: $space*4;
+    border-radius: 50%;
+    text-align: center;
+  }
+} */
+
+/* Back of Card */
+
+/* .back {
+  padding: $space*2;
+  background-color: #d7cbb9;
+  h2 {
+    font-family: 'Passion One', cursive;
+    font-weight: normal;
+    font-size: $space*3;
+  }
+}
+
+.recipe-components {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  ul, ol {
+    padding: 0 0 0 $space;
+  }
+}
+
+.recipe-components > * {
+  flex: 1;
+} */
+
+/* Utility */
+
+/* .js-hide {
+  display: none;
+} */
+
+
+
+
+
+
+
+/* card option 2 */
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+/* body {
+  background: linear-gradient(to left, #FF5F6D , #FFC371);
+  font-family: sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+} */
+
+/* #container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+#container.closed header { cursor: pointer; }
+header { cursor: pointer; }
+
+.header {
+  width: 100%;
+  height: 250px;
+  background: center / cover;
+  /* background-image: url(https://3.bp.blogspot.com/-v7vHC8w2AKs/TbbD-X8BhTI/AAAAAAAAAJ4/LCcrwIaMgf0/s1600/Mint+Julep+glass+tools.jpg); */
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 0px;
+}
+
+#container.closed .title {
+  padding: 40px 20px 10px 20px;
+  margin-top: -87px;
+  color: white;
+  border: none;
+}
+
+.title:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  opacity: 0;
+}
+
+/* #container.closed .title:before {
+  opacity: 1;
+} */
+
+article {
+  padding: 25px 30px;
+  overflow: hidden;
+  max-height: 400px;
+} 
+
+#container.closed article {
+  max-height: 0px;
+  padding: 0 30px;
+}
+
+.ingredients {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+  padding-left: 4px;
+  font-size: 0.9rem;
+}
+
+.ingredients > li {
+  list-style-type: none;
+  display: flex;
+  margin: 4px 0px;
+}
+
+.ingredients > li > .amount {
+  width: 80px;
+  color: #1976D2;
+}
+
+.preperation > div {
+  margin-bottom: 10px;
+}

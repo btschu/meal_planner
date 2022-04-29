@@ -6,6 +6,7 @@ def dashboard(request):
         return redirect('/')
     else:
         context = {
-            'user': User.objects.get(id=request.session['user_id'])
+            'user': User.objects.get(id=request.session['user_id']),
+            # 'recipes' : Recipe.all()
         }
         return render(request, 'recipe_app/dashboard.html', context)
